@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header__call-box">
-            <a class="header__call-box__number" href="tel:907-445-5195">give us a call</a>
-        </div>
+    <div class="header__call-box">
+        <a class="header__call-box__number" href="tel:907-445-5195">feel free to call: 907-445-5195</a>
+    </div>
 
+    <header class="header">
         <nav class="header__nav">
-            <a class="header__nav__logo" href="">
-                <img src="" alt="">
+            <a href="">
+                <img class="header__nav__logo" src="./media/op-logo.png" alt="">
             </a>
-            <a class="header__nav__menu" href="">
+            <a class="header__nav__menu" href="#header__nav__list">
                 <p class="header__nav__menu__text">menu</p>
                 <div class="header__nav__menu__icon">
                     <span class="header__nav__menu__icon__bar"></span>
@@ -24,10 +24,17 @@
                     <span class="header__nav__menu__icon__bar"></span>
                 </div>
             </a>
+            <ul class="header__nav__list" id="header__nav__list">
+                <li class="header__nav__list__items"><a class="header__nav__list__links" href="">close</a></li>
+                <li class="header__nav__list__items"><a class="header__nav__list__links" href="">the destination</a></li>
+                <li class="header__nav__list__items"><a class="header__nav__list__links" href="">activities</a></li>
+                <li class="header__nav__list__items"><a class="header__nav__list__links" href="">the experience</a></li>
+                <li class="header__nav__list__items"><a class="header__nav__list__links" href="">plan your adventure</a></li>
+            </ul>
         </nav>
 
         <section class="header__content">
-            <h1 class="header__content__title">adventures above the arctic</h1>
+            <h1 class="header__content__title"><span>adventures</span> above the arctic</h1>
             <p class="header__content__desc">Plan your own custom adventure with activites, gear, guides, and lodging ready before you arrive.</p>
             <a class="header__content__cta" href="">plan your adventure</a>
         </section>

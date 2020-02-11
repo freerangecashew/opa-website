@@ -5,9 +5,13 @@
     line-height: 1;
     list-style: none;
     text-decoration: none;
+    outline: none;
 }
 
 body {
     background-image: linear-gradient(rgba(256, 256, 256, .4)), url("../media/ep_naturalwhite.png");
     background-repeat: repeat;
+
+    font-family: 'Roboto';
 } 
+

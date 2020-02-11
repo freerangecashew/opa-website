@@ -1,48 +1,119 @@
 .header {
+    background: linear-gradient(170deg, rgba(256,256,256, 0) 30%, rgba(0,0,0, .3) 60%), url("../media/planeview2.jpg");
+    background-size: cover;
 
     &__call-box {
         text-align: center;
         padding: 10px 0;
+
+        &__number {
+            font-size: 14px;
+            color: #545454;
+        }
     }
 
+    // nav styles start
     &__nav {
+        position: relative;
         display: flex;
         justify-content: space-between;
-        padding: 10px;
-        background: red;
+        padding: 20px 10px;
 
         &__logo {
-            height: 55px;
-            width: 55px;
-            background: green;
+            height: 60px;
+            width: 60px;
         }
 
+        // menu styles start
         &__menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
             height: 55px;
             width: 100px;
             padding: 0 10px;
             border-radius: 50px;
-            background: gray;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-        }
+            border: 1px solid #fff;
 
-        &__menu__icon {
-            height: 50%;
+            &__text {
+                font: 400 16px/16px 'Permanent Marker';
+                color: #545454;
+            }
+
+            &__icon {
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            &__icon__bar {
+                height: 4px;
+                width: 30px;
+                border-radius: 50px;
+                background: #545454;
+            }
+        } // menu styles end 
+
+        // list styles start
+        &__list {
+            background: #7CAE7A;
+            position: absolute;
+            left: 0;
+            top: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            width: 100%;
+            padding: 50px 10px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .5s;
+
+            &:target {
+                visibility: visible;
+                opacity: .98;
+            }
+
+            &__links {
+                display: block;
+                padding: 20px 0;
+                color: #fff;
+
+                &:visited {
+                    color: #fff;
+                }
+            }
         }
 
-        &__menu__icon__bar {
-            height: 2px;
-            width: 30px;
-            background: black;
-        }
-    }
+    } // nav styles end 
 
+    // content styles start
     &__content {
-        padding: 10px;
+        padding: 100px 10px;
+
+        &__title {
+            font: 400 36px/30px 'Permanent Marker';
+            color: #fff;
+
+            span {
+                display: block;
+            }
+        }
+
+        &__desc {
+            margin: 10px 0 40px 0;
+            font: 400 16px/21px 'Roboto';
+            max-width: 280px;
+            color: #e8e8e8;
+        }
+
+        &__cta {
+            padding: 10px 20px;
+            border-radius: 50px;
+            background: #7CAE7A;
+            color: #f1f1f1;
+            text-transform: capitalize;
+        }
     }
 }
