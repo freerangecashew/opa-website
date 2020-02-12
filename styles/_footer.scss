@@ -1,0 +1,73 @@
+.footer {
+
+    &__content {
+        position: relative;
+        background: url("../media/footermtns.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &__text-box {
+            padding: 180px 0 60px 10px;
+
+            &__title {
+                font: 400 30px/30px 'Permanent Marker';
+                color: #f1f1f1;
+
+                span {
+                    display: block;
+                }
+            }
+
+            &__desc {
+                margin: 10px 0 40px 0;
+                font: 400 16px/21px 'Roboto';
+                max-width: 260px;
+                color: #d3d3d3;
+            }
+
+            &__cta {
+                padding: 10px 20px;
+                border-radius: 50px;
+                background: #7CAE7A;
+                color: #f1f1f1;
+                text-transform: capitalize;
+            }
+        }
+    } // content styles end
+
+    &__nav {
+        padding: 20px 5px 10px 5px;
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+
+            &__links {
+                display: inline-block;
+                margin: 5px 5px;
+                padding: 5px 10px;
+                border-radius: 50px;
+                background: #7CAE7A;
+                color: #f1f1f1;
+                text-transform: capitalize;
+            }
+        }
+    } // footer nav styles end
+
+    &__contact {
+        padding: 10px 5px 20px 5px;
+
+        &__list {
+            display: flex;
+
+            &__links {
+                margin: 5px 5px;
+
+                img {
+                    height: 45px;
+                    width: 45px;
+                }
+            }
+        }
+    }
+} // footer styles end

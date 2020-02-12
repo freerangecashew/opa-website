@@ -1,6 +1,8 @@
 .header {
+    position: relative;
     background: linear-gradient(170deg, rgba(256,256,256, 0) 30%, rgba(0,0,0, .3) 60%), url("../media/planeview2.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
 
     &__call-box {
         text-align: center;
@@ -60,7 +62,7 @@
             background: #7CAE7A;
             position: absolute;
             left: 0;
-            top: 100%;
+            top: 0;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -90,11 +92,11 @@
 
     // content styles start
     &__content {
-        padding: 100px 10px;
+        padding: 40px 10px 120px 10px;
 
         &__title {
             font: 400 36px/30px 'Permanent Marker';
-            color: #fff;
+            color: #f1f1f1;
 
             span {
                 display: block;
@@ -105,7 +107,7 @@
             margin: 10px 0 40px 0;
             font: 400 16px/21px 'Roboto';
             max-width: 280px;
-            color: #e8e8e8;
+            color: #d3d3d3;
         }
 
         &__cta {
@@ -115,5 +117,14 @@
             color: #f1f1f1;
             text-transform: capitalize;
         }
+    }
+
+    &__gallery {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(50%);
+        background: rgba(0,0,0, .3);
+        height: 120px;
+        width: 100%;
     }
 }
