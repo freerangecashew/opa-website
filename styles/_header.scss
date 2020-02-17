@@ -14,6 +14,14 @@
         }
     }
 
+    &__call-box--color {
+        background: #7CAE7A;
+        
+        &__number {
+            color: #f1f1f1;
+        }
+    }
+
     // nav styles start
     &__nav {
         position: relative;
@@ -23,7 +31,6 @@
 
         &__logo {
             height: 60px;
-            width: 60px;
         }
 
         // menu styles start
@@ -61,6 +68,7 @@
         &__list {
             background: #7CAE7A;
             position: absolute;
+            z-index: 1000;
             left: 0;
             top: 0;
             display: flex;

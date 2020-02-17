@@ -70,4 +70,15 @@
             }
         }
     }
+
+    &__bottom {
+        background: #222;
+        text-align: center;
+        padding: 10px;
+
+        &__title {
+            color: #d3d3d3;
+            text-transform: capitalize;
+        }
+    }
 } // footer styles end

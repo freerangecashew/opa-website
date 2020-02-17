@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto:400,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto:400,900|Roboto+Condensed|Libre+Barcode+128+Text&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -34,6 +34,14 @@ body {
   color: #545454;
 }
 
+.header__call-box--color {
+  background: #7CAE7A;
+}
+
+.header__call-box--color__number {
+  color: #f1f1f1;
+}
+
 .header__nav {
   position: relative;
   display: -webkit-box;
@@ -47,7 +55,6 @@ body {
 
 .header__nav__logo {
   height: 60px;
-  width: 60px;
 }
 
 .header__nav__menu {
@@ -94,6 +101,7 @@ body {
 .header__nav__list {
   background: #7CAE7A;
   position: absolute;
+  z-index: 1000;
   left: 0;
   top: 0;
   display: -webkit-box;
@@ -215,6 +223,122 @@ body {
   font: 400 16px/20px 'Roboto';
 }
 
+.ticket {
+  background-image: url("../media/topography.png");
+  border-radius: 20px;
+  margin: 0 10px;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.ticket__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.ticket__top__plane {
+  height: 25px;
+  width: 25px;
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+
+.ticket__top__title {
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+
+.ticket__body {
+  background: #fff;
+  padding: 20px 10px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(66%, #d8d8d8), color-stop(0%, rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, #d8d8d8 66%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 15px 1px;
+  background-repeat: repeat-x;
+}
+
+.ticket__body__company {
+  font: 500 30px/34px 'Roboto Condensed';
+  text-transform: capitalize;
+}
+
+.ticket__body__flight {
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.ticket__body__flight__content {
+  margin-bottom: 5px;
+}
+
+.ticket__body__flight__content__title {
+  margin-bottom: 2px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.ticket__body__flight__content__desc {
+  text-transform: uppercase;
+  color: #545454;
+}
+
+.ticket__body__flight__qr {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.ticket__body__flight__qr img {
+  height: 80px;
+}
+
+.ticket__body__content__title {
+  margin-bottom: 2px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.ticket__body__content__desc {
+  color: #545454;
+}
+
+.ticket__bottom {
+  padding: 40px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.ticket__bottom__logo {
+  width: 100px;
+  opacity: .4;
+}
+
+.ticket__bottom__barcode {
+  margin-top: 20px;
+  font: normal 25px/25px 'Libre Barcode 128 Text';
+}
+
 .footer__content {
   position: relative;
   background: url("../media/footermtns.png");
@@ -289,5 +413,16 @@ body {
 .footer__contact__list__links img {
   height: 45px;
   width: 45px;
+}
+
+.footer__bottom {
+  background: #222;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer__bottom__title {
+  color: #d3d3d3;
+  text-transform: capitalize;
 }
 /*# sourceMappingURL=styles.css.map */
