@@ -5,16 +5,33 @@
         background: url("../media/footermtns.png");
         background-size: cover;
         background-repeat: no-repeat;
+        padding: 250px 10px 100px 10px;
+
+        @include mobileM {
+            padding: 250px 20px 100px 20px;
+        }
+
+        @include mobileL {
+            padding: 250px 40px 100px 40px;
+        }
 
         &__text-box {
-            padding: 180px 0 60px 10px;
+
 
             &__title {
                 font: 400 30px/30px 'Permanent Marker';
                 color: #f1f1f1;
 
+                @include mobileM {
+                    font-size: 32px;
+                }
+
                 span {
                     display: block;
+
+                    @include mobileL {
+                        display: inline-block;
+                    }
                 }
             }
 
@@ -23,6 +40,18 @@
                 font: 400 16px/21px 'Roboto';
                 max-width: 260px;
                 color: #d3d3d3;
+
+                @include mobileM {
+                    max-width: 290px;
+                    font-size: 17px;
+                }
+
+                
+                @include mobileL {
+                    max-width: 320px;
+                    font-size: 18px;
+                    line-height: 22px;
+                }
             }
 
             &__cta {
@@ -36,7 +65,15 @@
     } // content styles end
 
     &__nav {
-        padding: 20px 5px 10px 5px;
+        padding: 20px 10px 10px 10px;
+
+        @include mobileM {
+            padding: 20px 20px 10px 20px;
+        }
+
+        @include mobileL {
+            padding: 20px 40px 10px 40px;
+        }
 
         &__list {
             display: flex;
@@ -44,7 +81,7 @@
 
             &__links {
                 display: inline-block;
-                margin: 5px 5px;
+                margin: 5px 10px 5px 0;
                 padding: 5px 10px;
                 border-radius: 50px;
                 background: #7CAE7A;
@@ -55,13 +92,21 @@
     } // footer nav styles end
 
     &__contact {
-        padding: 10px 5px 20px 5px;
+        padding: 0 10px 20px 10px;
+
+        @include mobileM {
+            padding: 0 20px 20px 20px;
+        }
+
+        @include mobileL {
+            padding: 0 40px 20px 40px;
+        }
 
         &__list {
             display: flex;
 
             &__links {
-                margin: 5px 5px;
+                margin: 5px 10px 5px 0;
 
                 img {
                     height: 45px;

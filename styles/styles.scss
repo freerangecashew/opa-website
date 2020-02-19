@@ -1,6 +1,9 @@
+// google font imports
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto:400,900|Roboto+Condensed|Libre+Barcode+128+Text&display=swap');
 
+// scss partial imports
 @import "_base";
+@import "_variables";
 @import "_header";
 @import "_card";
 @import "_ticket";

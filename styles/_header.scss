@@ -15,7 +15,7 @@
     }
 
     &__call-box--color {
-        background: #7CAE7A;
+        background: $green;
         
         &__number {
             color: #f1f1f1;
@@ -28,6 +28,10 @@
         display: flex;
         justify-content: space-between;
         padding: 20px 10px;
+
+        @include mobileM {
+            padding: 20px;
+        }
 
         &__logo {
             height: 60px;
@@ -80,6 +84,10 @@
             opacity: 0;
             transition: opacity .5s;
 
+            @include mobileM {
+                padding: 50px 20px;
+            }
+
             &:target {
                 visibility: visible;
                 opacity: .98;
@@ -102,6 +110,10 @@
     &__content {
         padding: 40px 10px 120px 10px;
 
+        @include mobileM {
+            padding: 50px 20px 140px 20px;
+        }
+
         &__title {
             font: 400 36px/30px 'Permanent Marker';
             color: #f1f1f1;
@@ -116,6 +128,11 @@
             font: 400 16px/21px 'Roboto';
             max-width: 280px;
             color: #d3d3d3;
+
+            @include mobileM {
+                font-size: 17px;
+                max-width: 300px;
+            }
         }
 
         &__cta {
@@ -131,8 +148,13 @@
         position: absolute;
         bottom: 0;
         transform: translateY(50%);
-        background: rgba(0,0,0, .3);
-        height: 120px;
         width: 100%;
+        overflow-x: hidden;
+
+        &__img {
+            height: 150px;
+            object-fit: cover;
+            width: 100%;
+        }
     }
 }

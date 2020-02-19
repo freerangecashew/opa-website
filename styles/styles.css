@@ -53,6 +53,12 @@ body {
   padding: 20px 10px;
 }
 
+@media (min-width: 375px) {
+  .header__nav {
+    padding: 20px;
+  }
+}
+
 .header__nav__logo {
   height: 60px;
 }
@@ -121,6 +127,12 @@ body {
   transition: opacity .5s;
 }
 
+@media (min-width: 375px) {
+  .header__nav__list {
+    padding: 50px 20px;
+  }
+}
+
 .header__nav__list:target {
   visibility: visible;
   opacity: .98;
@@ -140,6 +152,12 @@ body {
   padding: 40px 10px 120px 10px;
 }
 
+@media (min-width: 375px) {
+  .header__content {
+    padding: 50px 20px 140px 20px;
+  }
+}
+
 .header__content__title {
   font: 400 36px/30px 'Permanent Marker';
   color: #f1f1f1;
@@ -156,6 +174,13 @@ body {
   color: #d3d3d3;
 }
 
+@media (min-width: 375px) {
+  .header__content__desc {
+    font-size: 17px;
+    max-width: 300px;
+  }
+}
+
 .header__content__cta {
   padding: 10px 20px;
   border-radius: 50px;
@@ -169,8 +194,14 @@ body {
   bottom: 0;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
-  background: rgba(0, 0, 0, 0.3);
-  height: 120px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.header__gallery__img {
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 
@@ -178,10 +209,30 @@ body {
   margin: 120px 0;
 }
 
+@media (min-width: 375px) {
+  .card {
+    margin: 140px 0;
+  }
+}
+
+@media (min-width: 425px) {
+  .card {
+    margin: 160px 0;
+  }
+}
+
 .card__img {
   width: 100%;
   height: 250px;
   margin-bottom: -50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 425px) {
+  .card__img {
+    height: 300px;
+  }
 }
 
 .card__title-box {
@@ -204,6 +255,18 @@ body {
           transform: translateY(-50%);
 }
 
+@media (min-width: 375px) {
+  .card__title-box__titles {
+    left: 20px;
+  }
+}
+
+@media (min-width: 425px) {
+  .card__title-box__titles {
+    left: 40px;
+  }
+}
+
 .card__title-box__titles__title {
   font: 400 28px/28px 'Permanent Marker';
   color: #222;
@@ -223,12 +286,41 @@ body {
   font: 400 16px/20px 'Roboto';
 }
 
+@media (min-width: 375px) {
+  .card__desc {
+    max-width: 300px;
+    margin: 10px 0 0 20px;
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 425px) {
+  .card__desc {
+    max-width: 320px;
+    margin: 10px 0 0 40px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
 .ticket {
   background-image: url("../media/topography.png");
   border-radius: 20px;
   margin: 0 10px;
   -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 375px) {
+  .ticket {
+    margin: 0 20px;
+  }
+}
+
+@media (min-width: 425px) {
+  .ticket {
+    margin: 0 40px;
+  }
 }
 
 .ticket__top {
@@ -255,8 +347,9 @@ body {
 }
 
 .ticket__body {
+  overflow: hidden;
   background: #fff;
-  padding: 20px 10px;
+  padding: 20px 10px 40px 10px;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(66%, #d8d8d8), color-stop(0%, rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, #d8d8d8 66%, rgba(255, 255, 255, 0) 0%);
   background-position: bottom;
@@ -265,13 +358,15 @@ body {
 }
 
 .ticket__body__company {
+  position: relative;
+  z-index: 10;
   font: 500 30px/34px 'Roboto Condensed';
   text-transform: capitalize;
 }
 
 .ticket__body__flight {
   position: relative;
-  margin: 20px 0;
+  margin: 40px 0;
   width: 100%;
   height: 80px;
   display: -webkit-box;
@@ -280,6 +375,18 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+@media (min-width: 375px) {
+  .ticket__body__flight {
+    margin: 50px 0;
+  }
+}
+
+@media (min-width: 425px) {
+  .ticket__body__flight {
+    margin: 60px 0;
+  }
 }
 
 .ticket__body__flight__content {
@@ -306,6 +413,20 @@ body {
 
 .ticket__body__flight__qr img {
   height: 80px;
+}
+
+.ticket__body__flight__map {
+  opacity: .3;
+  height: 150px;
+  position: absolute;
+  right: -90px;
+  top: -40px;
+}
+
+@media (min-width: 425px) {
+  .ticket__body__flight__map {
+    top: -30px;
+  }
 }
 
 .ticket__body__content__title {
@@ -344,10 +465,19 @@ body {
   background: url("../media/footermtns.png");
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 250px 10px 100px 10px;
 }
 
-.footer__content__text-box {
-  padding: 180px 0 60px 10px;
+@media (min-width: 375px) {
+  .footer__content {
+    padding: 250px 20px 100px 20px;
+  }
+}
+
+@media (min-width: 425px) {
+  .footer__content {
+    padding: 250px 40px 100px 40px;
+  }
 }
 
 .footer__content__text-box__title {
@@ -355,8 +485,20 @@ body {
   color: #f1f1f1;
 }
 
+@media (min-width: 375px) {
+  .footer__content__text-box__title {
+    font-size: 32px;
+  }
+}
+
 .footer__content__text-box__title span {
   display: block;
+}
+
+@media (min-width: 425px) {
+  .footer__content__text-box__title span {
+    display: inline-block;
+  }
 }
 
 .footer__content__text-box__desc {
@@ -364,6 +506,21 @@ body {
   font: 400 16px/21px 'Roboto';
   max-width: 260px;
   color: #d3d3d3;
+}
+
+@media (min-width: 375px) {
+  .footer__content__text-box__desc {
+    max-width: 290px;
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 425px) {
+  .footer__content__text-box__desc {
+    max-width: 320px;
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .footer__content__text-box__cta {
@@ -375,7 +532,19 @@ body {
 }
 
 .footer__nav {
-  padding: 20px 5px 10px 5px;
+  padding: 20px 10px 10px 10px;
+}
+
+@media (min-width: 375px) {
+  .footer__nav {
+    padding: 20px 20px 10px 20px;
+  }
+}
+
+@media (min-width: 425px) {
+  .footer__nav {
+    padding: 20px 40px 10px 40px;
+  }
 }
 
 .footer__nav__list {
@@ -388,7 +557,7 @@ body {
 
 .footer__nav__list__links {
   display: inline-block;
-  margin: 5px 5px;
+  margin: 5px 10px 5px 0;
   padding: 5px 10px;
   border-radius: 50px;
   background: #7CAE7A;
@@ -397,7 +566,19 @@ body {
 }
 
 .footer__contact {
-  padding: 10px 5px 20px 5px;
+  padding: 0 10px 20px 10px;
+}
+
+@media (min-width: 375px) {
+  .footer__contact {
+    padding: 0 20px 20px 20px;
+  }
+}
+
+@media (min-width: 425px) {
+  .footer__contact {
+    padding: 0 40px 20px 40px;
+  }
 }
 
 .footer__contact__list {
@@ -407,7 +588,7 @@ body {
 }
 
 .footer__contact__list__links {
-  margin: 5px 5px;
+  margin: 5px 10px 5px 0;
 }
 
 .footer__contact__list__links img {
