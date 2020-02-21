@@ -1,49 +1,69 @@
+.cards {
+
+    @include tablet {
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    @include laptop {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include laptopL {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 .card {
-    margin: 120px 0;
+    margin-top: 120px;
+    position: relative;
+    z-index: 100;
 
     @include mobileM {
-        margin: 140px 0;
+        margin-top: 140px;
     }
 
     @include mobileL {
-        margin: 160px 0;
+        margin-top: 160px;
+    }
+
+    @include tablet {
+        margin: 20px;
+        box-shadow: 0 0 7px rgba(0,0,0, .15);
     }
 
     &__img {
         width: 100%;
-        height: 250px;
+        height: auto;
         margin-bottom: -50px;
         object-fit: cover;
-
-        @include mobileL {
-            height: 300px;
-        }
     }
 
     &__title-box {
-        position: relative;
-        height: 80px;
+        display: inline-block;
+        background: url("../media/tapu.png") no-repeat right;
+        padding: 0 35px 0 10px;
 
-        &__img {
-            height: 100%;
-            width: 100%;
-            transform: rotateZ(180deg);
+        @include mobileM {
+            padding: 0 40px 0 20px;
+        }
+
+        @include mobileL {
+            padding: 0 60px 0 40px;
+        }
+
+        @include tablet {
+            padding: 0 60px 0 20px;
         }
 
         &__titles {
-            position: absolute;
-            top: 50%;
-            left: 10px;
-            transform: translateY(-50%);
-            
-            @include mobileM {
-                left: 20px;
-            }
-
-            @include mobileL {
-                left: 40px;
-            }
-
+            position: relative;
+            z-index: 10;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
             &__title {
                 font: 400 28px/28px 'Permanent Marker';
@@ -61,21 +81,45 @@
 
     &__desc {
         color: #626262;
-        margin: 10px 0 0 10px;
-        max-width: 260px;
-        font: 400 16px/20px 'Roboto';
+        padding: 10px;
+        font: 400 16px/1.4 'Roboto';
 
         @include mobileM {
-            max-width: 300px;
-            margin: 10px 0 0 20px;
+            padding: 10px 20px;
             font-size: 17px;
         }
 
         @include mobileL {
-            max-width: 320px;
-            margin: 10px 0 0 40px;
+            padding: 10px 40px;
             font-size: 18px;
-            line-height: 22px;
+        }
+
+        @include tablet {
+            padding: 20px;
+        }
+
+        @include laptopL {
+            font-size: 20px;
+        }
+
+        &__item {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            text-transform: capitalize;
+
+            &__span {
+                font-family: 'Roboto Condensed';
+                font-weight: bold;
+                color: #222222;
+                margin-right: 5px;
+            }
+
+            &__img {
+                width: 25px;
+                opacity: .8;
+                margin-right: 10px;
+            }
         }
     }
 }

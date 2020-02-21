@@ -1,29 +1,57 @@
 .footer {
+    position: relative;
+
+    @include laptop {
+        &::before {
+            content: url("../media/op-logo.png");
+            position: absolute;
+            top: -50px;
+            right: 0;
+            opacity: .4;
+        }
+    }
 
     &__content {
         position: relative;
         background: url("../media/footermtns.png");
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 250px 10px 100px 10px;
+        background-position: top left;
+        padding: 300px 10px 80px 10px;
 
         @include mobileM {
-            padding: 250px 20px 100px 20px;
+            padding: 300px 20px 60px 20px;
         }
 
         @include mobileL {
-            padding: 250px 40px 100px 40px;
+            padding: 300px 40px 60px 40px;
+        }
+
+        @include tablet {
+            padding: 350px 40px 60px 40px;
+            text-align: center;
+        }
+
+        @include laptop {
+            padding: 400px 40px 60px 40px;
+        }
+
+        @include laptopL {
+            padding: 500px 40px 60px 40px;
         }
 
         &__text-box {
 
-
             &__title {
-                font: 400 30px/30px 'Permanent Marker';
+                font: 400 30px/.7 'Permanent Marker';
                 color: #f1f1f1;
 
                 @include mobileM {
                     font-size: 32px;
+                }
+
+                @include laptop {
+                    font-size: 40px;
                 }
 
                 span {
@@ -37,20 +65,30 @@
 
             &__desc {
                 margin: 10px 0 40px 0;
-                font: 400 16px/21px 'Roboto';
-                max-width: 260px;
+                font: 400 16px/1.4 'Roboto';
                 color: #d3d3d3;
 
                 @include mobileM {
-                    max-width: 290px;
                     font-size: 17px;
                 }
-
                 
                 @include mobileL {
-                    max-width: 320px;
                     font-size: 18px;
-                    line-height: 22px;
+                }
+
+                @include tablet {
+                    max-width: 400px;
+                    margin: 10px auto 40px auto;
+                }
+
+                @include laptop {
+                    max-width: 450px;
+                    font-size: 20px;
+                }
+
+                @include laptop {
+                    max-width: 480px;
+                    font-size: 22px;
                 }
             }
 
@@ -79,6 +117,10 @@
             display: flex;
             flex-wrap: wrap;
 
+            @include tablet {
+                justify-content: center;
+            }
+
             &__links {
                 display: inline-block;
                 margin: 5px 10px 5px 0;
@@ -104,6 +146,10 @@
 
         &__list {
             display: flex;
+
+            @include tablet {
+                justify-content: center;
+            }
 
             &__links {
                 margin: 5px 10px 5px 0;
